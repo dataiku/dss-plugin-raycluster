@@ -1,0 +1,93 @@
+/* This file is the descriptor for the python runnable start-ray-cluster */
+{
+    "meta": {
+        "label": "Start Ray Cluster",
+        "description": "Start a Ray Cluster on a Dataiku-managed Elastic AI Cluster.",
+        "icon": "fas fa-play"
+    },
+
+    /* whether the runnable's code is untrusted */
+    "impersonate": false,
+
+
+    /* params */
+    "params": [
+        {
+            "name": "k8s_cluster_name",
+            "label": "Elastic AI Cluster",
+            "type": "CLUSTER",
+            "description": "Elastic AI Cluster onto which the Ray Cluster will be deployed.",
+            "mandatory": true
+        },
+        {
+            "name": "kuberay_version",
+            "label": "KubeRay version",
+            "type": "STRING",
+            "description": "see: https://github.com/ray-project/kuberay/releases",
+            "defaultValue": "v1.2.2",
+            "mandatory": true
+        },
+        {
+            "name": "sep1",
+            "label": "Ray Cluster",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "image_tag",
+            "label": "Ray image tag",
+            "type": "STRING",
+            "description": "see: https://hub.docker.com/r/rayproject/ray",
+            "defaultValue": "2.40.0.22541c-py310",
+            "mandatory": true
+        },
+        {
+            "name": "ray_version",
+            "label": "Ray version",
+            "type": "STRING",
+            "description": "must match version of image tag",
+            "defaultValue": "2.40.0",
+            "mandatory": true
+        },
+        {
+            "name": "ray_head_cpu",
+            "label": "Ray Head CPU",
+            "type": "INT",
+            "defaultValue": "1",
+            "mandatory": true
+        },
+        {
+            "name": "ray_head_ram",
+            "label": "Ray Head RAM",
+            "type": "INT",
+            "defaultValue": "4",
+            "description": "in GB.",
+            "mandatory": true
+        },  
+        {
+            "name": "ray_num_workers",
+            "label": "Ray number workers",
+            "type": "INT",
+            "defaultValue": "2",
+            "mandatory": true
+        },  
+        {
+            "name": "ray_worker_cpu",
+            "label": "Ray Worker CPU",
+            "type": "INT",
+            "defaultValue": "1",
+            "mandatory": true
+        },  
+        {
+            "name": "ray_worker_ram",
+            "label": "Ray Worker RAM",
+            "type": "INT",
+            "defaultValue": "1",
+            "description": "in GB.",
+            "mandatory": true
+        }
+    ],
+
+    /* list of required permissions on the project to see/run the runnable */
+    "requiresGlobalAdmin": true,
+    "resultType": "HTML"
+}

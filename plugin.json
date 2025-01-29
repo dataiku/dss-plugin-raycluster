@@ -1,0 +1,16 @@
+{
+    "id": "ray-cluster",
+    "version": "0.0.1",
+
+    "meta": {
+        "label": "Ray cluster",
+        "description": "Deploys a Ray Cluster to a Dataiku-managed Elastic AI Cluster.",
+
+        "author": "ned.martorell",
+        "icon": "fas fa-star",
+
+        "tags": [], //for example: ["Machine Learning", "NLP"]
+        "url": "",
+        "licenseInfo": "Apache Software License"
+    }
+}

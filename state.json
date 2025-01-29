@@ -1,0 +1,12 @@
+{
+  "actions": [
+    {
+      "ts": 1738183323123,
+      "action": "INSTALL",
+      "user": "ned.martorell"
+    }
+  ],
+  "gitState": {
+    "enabled": false
+  }
+}

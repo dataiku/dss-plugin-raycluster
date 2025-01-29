@@ -1,0 +1,27 @@
+/* This file is the descriptor for the python runnable start-ray-cluster */
+{
+    "meta": {
+        "label": "Inspect Ray Cluster",
+        "description": "Inspect a Ray Cluster on a Dataiku-managed Elastic AI Cluster.",
+        "icon": "fas fa-eye"
+    },
+
+    /* whether the runnable's code is untrusted */
+    "impersonate": false,
+
+
+    /* params */
+    "params": [
+        {
+            "name": "k8s_cluster_name",
+            "label": "Elastic AI Cluster",
+            "type": "CLUSTER",
+            "description": "Elastic AI Cluster to inspect.",
+            "mandatory": true
+        }
+    ],
+
+    /* list of required permissions on the project to see/run the runnable */
+    "requiresGlobalAdmin": true,
+    "resultType": "RESULT_TABLE"
+}

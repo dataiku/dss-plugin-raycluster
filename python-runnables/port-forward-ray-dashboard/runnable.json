@@ -1,0 +1,28 @@
+/* This file is the descriptor for the python runnable start-ray-cluster */
+{
+    "meta": {
+        "label": "Ray Dashboard Port-Forward",
+        "description": "To access the Ray Dashboard, run this macro, and then navigate to http://DATAIKU_INSTANCE_URL:8265.",
+        "icon": "fas fa-forward"
+    },
+
+    /* whether the runnable's code is untrusted */
+    "impersonate": false,
+
+
+    /* params */
+    "params": [
+        {
+            "name": "k8s_cluster_name",
+            "label": "Elastic AI Cluster",
+            "type": "CLUSTER",
+            "description": "Elastic AI Cluster from which the Ray Cluster will be removed.",
+            "mandatory": true
+        }
+    ],
+
+    /* list of required permissions on the project to see/run the runnable */
+    "requiresGlobalAdmin": true,
+    "resultType": "HTML"
+}
+
