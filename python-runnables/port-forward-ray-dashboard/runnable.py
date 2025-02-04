@@ -35,9 +35,6 @@ class MyRunnable(Runnable):
         # Set kubeconfig environment variable
         configure_kubeconfig(cluster_name)
         
-        # Install Helm locally if not installed already
-        helm_cmd = get_helm_cmd()
-        
         # Uninstall the KubeRay Cluster and Operator
         try:
             r = subprocess.run(["kubectl", "port-forward", "service/raycluster-kuberay-head-svc", "--address", "0.0.0.0", "8265:8265"], capture_output=True) 
