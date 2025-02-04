@@ -16,7 +16,7 @@
             "name": "k8s_cluster_name",
             "label": "Elastic AI Cluster",
             "type": "CLUSTER",
-            "description": "Elastic AI Cluster from which the Ray Cluster will be removed.",
+            "description": "Elastic AI Cluster on which the Ray Cluster is installed.",
             "mandatory": true
         }
     ],
